@@ -1,4 +1,4 @@
-
+import os
 
 
 
@@ -16,6 +16,9 @@ def read_classification_from_file(Filepath):
 
 
 
-
+def write_classification_to_file(Filepath,Dictionary):
+    with open(Filepath, 'w', encoding='utf-8') as FILE:
+        for item in Dictionary:
+            FILE.write(item+' '+Dictionary[item]+'\n')
 
 
